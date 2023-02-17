@@ -18,8 +18,8 @@ function App() {
     let filteredTasks = tasks.filter((t) => t.id !== id);
     setTasks(filteredTasks);
   }
-  function addTask() {
-    let newTask = { id: v1(), title: "New Task", isDone: false };
+  function addTask(title: string) {
+    let newTask = { id: v1(), title: title, isDone: false };
     setTasks([newTask, ...tasks]);
   }
 
